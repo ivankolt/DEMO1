@@ -89,7 +89,7 @@ dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 9.0.3
 
 ```bash
 dotnet ef dbcontext scaffold "Host=localhost;Database=NAME;Username=NAME;Password=;" Npgsql.EntityFrameworkCore.PostgreSQL -o Models -f
-
+```
 ---
 
 ### Описание графического интерфейса
@@ -116,6 +116,7 @@ dotnet ef dbcontext scaffold "Host=localhost;Database=NAME;Username=NAME;Passwor
 ### 1. Клонируйте репозиторий
 ```bash
 git clone https://github.com/ivankolt/DEMO1.git
+```
 
 ### 2. Подготовьте базу данных
 Откройте pgAdmin4 и создайте пустую базу данных, например Auto_Service.
@@ -129,9 +130,11 @@ git clone https://github.com/ivankolt/DEMO1.git
 
 ```text
 Models/DemoContext.cs
+```
 
 ### 4. Запустите приложение
 Перейдите в корневую папку проекта и выполните команду:
 
 ```bash
 dotnet run
+```
