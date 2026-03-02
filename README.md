@@ -82,6 +82,7 @@ dotnet add package Microsoft.EntityFrameworkCore --version 9.0.3
 dotnet add package Microsoft.EntityFrameworkCore.Design --version 9.0.3
 dotnet add package Npgsql --version 9.0.3
 dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 9.0.3
+```
 
 ### ⚙️ Генерация моделей (Scaffold)
 Классы моделей и контекст базы данных (`DemoContext`) были сгенерированы автоматически (Reverse Engineering) при помощи команды:
