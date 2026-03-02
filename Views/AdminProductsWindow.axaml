@@ -1,0 +1,52 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600" MaxHeight="700" MaxWidth="800" MinHeight="600"
+        x:Class="Den.Views.AdminProductsWindow"
+        Icon="avares://Den/Assets/Icon.ico"
+        Title="ООО Обувь - Администратор - Список товаров">
+          <Grid RowDefinitions="Auto, Auto, *">
+            <Grid Grid.Row="0">
+                <TextBlock HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    Text="Товары" FontSize="30"></TextBlock>
+
+                <Image HorizontalAlignment="Left" Margin="5" Width="100" Height="100" Source="C:\Users\HP\DEMO\День1\Den\Assets\Icon.JPG"></Image>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                  <TextBlock VerticalAlignment="Center" Name="FIO" Background="#7FFF00">
+
+                  </TextBlock>
+                  <Button Background="#00FA9A" Click="Button_Click1"  HorizontalAlignment="Right">
+                  <TextBlock Margin="5" Foreground="White" Text="Назад"></TextBlock>       
+                </Button>
+                </StackPanel>
+            </Grid> 
+            
+            <StackPanel Grid.Row="1" Margin="10" HorizontalAlignment="Stretch" Orientation="Vertical" VerticalAlignment="Center">
+              <TextBox TextChanged="TextChanged"  Watermark="Поиск" Name="text_" HorizontalAlignment="Stretch" Margin="20" TextWrapping="NoWrap">
+              </TextBox>
+              <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Left">
+                <ComboBox Name="Suppliers" SelectionChanged="Suppliers_SelectionChanged" Width="150" PlaceholderText="Поставщики" Margin="5">
+
+                </ComboBox>
+                <ComboBox Name="Sort" SelectionChanged="Sort_SelectionChanged" Width="150" PlaceholderText="Сортировка" Margin="5">
+                  <ComboBoxItem Content="По возрастанию"> </ComboBoxItem>
+                  <ComboBoxItem Content="По убыванию"> </ComboBoxItem>
+                  <ComboBoxItem Content="По умолчанию"> </ComboBoxItem>             
+                </ComboBox>
+
+                  <Button Background="#00FA9A" Click="Button_Add" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                    <TextBlock Margin="5" Foreground="White" Text="Добавить товар +"></TextBlock>       
+                  </Button>
+
+              </StackPanel>
+            </StackPanel>
+            
+            <ScrollViewer Grid.Row="2" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+              <StackPanel Name="Products" HorizontalAlignment="Stretch" Orientation="Vertical">
+
+              </StackPanel>
+            </ScrollViewer>
+        </Grid>    
+</Window>

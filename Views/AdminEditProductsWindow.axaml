@@ -1,0 +1,56 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="550" MaxHeight="550" MaxWidth="800" MinHeight="550" 
+        x:Class="Den.Views.AdminEditProductsWindow"
+        Icon="avares://Den/Assets/Icon.ico"
+        Title="ООО Обувь - Администратор - Список товаров">
+          <Grid RowDefinitions="Auto, Auto, Auto">
+            <Grid Grid.Row="0">
+                <TextBlock HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    Text="Изменение товара" Name="Title" FontSize="30"></TextBlock>
+
+                <Image HorizontalAlignment="Left" Margin="5" Width="100" Height="100" Source="C:\Users\HP\DEMO\День1\Den\Assets\Icon.JPG"></Image>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                  <Button Background="#00FA9A" Click="Button_Click1"  HorizontalAlignment="Right">
+                  <TextBlock Margin="5" Foreground="White" Text="Назад"></TextBlock>       
+                </Button>
+                </StackPanel>
+            </Grid> 
+            
+            <Grid ColumnDefinitions="*,*" Width="700" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="1">
+              <StackPanel Orientation="Vertical" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <TextBox Background="#7FFF00" Margin="10" HorizontalAlignment="Stretch" Name="Articule" Watermark="Артикул"></TextBox>
+                <ComboBox Background="#7FFF00" Margin="10" HorizontalAlignment="Stretch" Name="Type" PlaceholderText="Тип продукта"></ComboBox>
+                <TextBox Background="#7FFF00" Margin="10" HorizontalAlignment="Stretch" Name="Unit" Watermark="Еденица измерения"></TextBox>
+                <NumericUpDown Background="#7FFF00" Margin="10" HorizontalAlignment="Stretch" Name="Price" Minimum="0" Watermark="Цена"></NumericUpDown>
+                <ComboBox Background="#7FFF00" Margin="10" HorizontalAlignment="Stretch" Name="Suppliers" PlaceholderText="Поставщик"></ComboBox>
+                <ComboBox Background="#7FFF00" Margin="10" HorizontalAlignment="Stretch" Name="Manufactures" PlaceholderText="Производитель"></ComboBox>
+              </StackPanel>
+
+              <StackPanel Orientation="Vertical" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+
+                <ComboBox Background="#7FFF00" Margin="10" HorizontalAlignment="Stretch" Name="Gender" PlaceholderText="Пол"></ComboBox>
+                <NumericUpDown Background="#7FFF00" Margin="10" HorizontalAlignment="Stretch" Name="Discount" Minimum="0" Maximum="100" Watermark="Скидка"></NumericUpDown>
+                <NumericUpDown Background="#7FFF00" Margin="10" HorizontalAlignment="Stretch" Name="Qty" Minimum="0" Watermark="Количество"></NumericUpDown>
+                <TextBox Background="#7FFF00" Margin="10" HorizontalAlignment="Stretch" Name="Description" Watermark="Описание"></TextBox>    
+                <Image HorizontalAlignment="Stretch" Width="100" Height="100" Margin="10" Name="Img"></Image>
+
+                <Button   Background="#00FA9A" Click="Button_Click_Add" HorizontalAlignment="Stretch" Margin="10">
+                    <TextBlock Foreground="White"  HorizontalAlignment="Center" Text="Загрузить фото"></TextBlock>
+                </Button>
+                
+              </StackPanel>
+            </Grid>
+
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="2">
+              <Button Margin="10" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#00FA9A" Click="Button_Click_Save" >
+                  <TextBlock Margin="5" Foreground="White" Text="Сохранить"></TextBlock>       
+                </Button>
+            </Grid>
+            
+            
+        </Grid>    
+</Window>

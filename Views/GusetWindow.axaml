@@ -1,0 +1,28 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450" MaxHeight="450" MaxWidth="800" 
+        x:Class="Den.Views.GusetWindow"
+        Icon="avares://Den/Assets/Icon.ico"
+        Title="ООО Обувь - Гость - Список товаров">
+        <Grid RowDefinitions="Auto, *">
+            <Grid Grid.Row="0">
+                <TextBlock HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    Text="Товары" FontSize="30"></TextBlock>
+
+                <Image HorizontalAlignment="Left" Margin="5" Width="100" Height="100" Source="C:\Users\HP\DEMO\День1\Den\Assets\Icon.JPG"></Image>
+
+                <Button Background="#00FA9A" Click="Button_Click1"  HorizontalAlignment="Right">
+                  <TextBlock Margin="5" Foreground="White" Text="Назад"></TextBlock>       
+                </Button>
+            </Grid>   
+            
+            <ScrollViewer Grid.Row="1" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+              <StackPanel Name="Products" HorizontalAlignment="Stretch" Orientation="Vertical">
+
+              </StackPanel>
+            </ScrollViewer>
+        </Grid>    
+</Window>

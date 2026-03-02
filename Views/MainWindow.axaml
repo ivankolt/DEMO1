@@ -1,0 +1,37 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Den.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450" MaxHeight="450" MaxWidth="800" MinHeight="450" MinWidth="800"
+        x:Class="Den.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="avares://Den/Assets/Icon.ico"
+        Title="ООО Обувь - Авторизация">
+        <Grid RowDefinitions="Auto, *">
+            <Grid >
+                <TextBlock HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    Text="Авторизация" FontSize="30"  ></TextBlock>
+
+                <Image HorizontalAlignment="Left"  Width="100" Height="100" Source="C:\Users\HP\DEMO\День1\Den\Assets\Icon.JPG"></Image>
+            </Grid>  
+            
+            <Grid Grid.Row="1">
+                <Border BorderBrush="Black" BorderThickness="2" Width="500" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <StackPanel Orientation="Vertical" Margin="10" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                        <TextBox Background="#7FFF00" Margin="10" HorizontalAlignment="Stretch" Name="Login" Watermark="Логин"></TextBox>
+                        <TextBox Background="#7FFF00" Margin="10" HorizontalAlignment="Stretch" Name="Password" Watermark="Пароль"></TextBox>
+                        <Button Click="Button_Click_1"  Background="#00FA9A" HorizontalAlignment="Stretch" Margin="10">
+                            <TextBlock Foreground="White" HorizontalAlignment="Center" Text="Вход"></TextBlock>
+                        </Button>
+                        <Separator Background="Black" HorizontalAlignment="Stretch">
+                        </Separator>
+                        <Button Background="#00FA9A" Click="Button_Click" HorizontalAlignment="Stretch" Margin="10">
+                            <TextBlock Foreground="White" HorizontalAlignment="Center" Text="Гость"></TextBlock>
+                        </Button>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Grid>    
+</Window>
